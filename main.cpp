@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <vector>
+
 using namespace std;
 
 class Student {
@@ -16,6 +18,28 @@ public:
         this->grade = grade;
     }
 };
+
+
+void addStudent(vector<Student>& students) {
+    int id;
+    string name, surname;
+    double grade;
+
+    cout << "Enter ID: ";
+    cin >> id;
+
+    cout << "Enter name: ";
+    cin >> name;
+
+    cout << "Enter surname: ";
+    cin >> surname;
+
+    cout << "Enter grade: ";
+    cin >> grade;
+
+    students.push_back(Student(id, name, surname, grade));
+    cout << "Student added successfully.\n";
+}
 
 int main() {
     
