@@ -56,6 +56,19 @@ void searchStudentById(const vector<Student>& students) {
         }
     }
 
+    void deleteStudentById(vector<Student>&students) {
+        int id;
+        cout << "Enter student ID to delete: ";
+        cin >> id;
+
+        for (auto it = students.begin(); it != students.end(); ++it) {
+            if (it->id == id) {
+                students.erase(it);
+                cout << "Student deleted successfully.\n";
+                return;
+            }
+        }
+
 int main() {
     
     return 0;
