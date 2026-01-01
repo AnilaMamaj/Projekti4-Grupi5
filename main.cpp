@@ -41,6 +41,21 @@ void addStudent(vector<Student>& students) {
     cout << "Student added successfully.\n";
 }
 
+void searchStudentById(const vector<Student>& students) {
+    int id;
+    cout << "Enter student ID to search: ";
+    cin >> id;
+
+    for (const auto& s : students) {
+        if (s.id == id) {
+            cout << "ID: " << s.id << endl;
+            cout << "Name: " << s.name << endl;
+            cout << "Surname: " << s.surname << endl;
+            cout << "Grade: " << s.grade << endl;
+            return;
+        }
+    }
+
 int main() {
     
     return 0;
