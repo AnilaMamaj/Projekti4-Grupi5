@@ -1,38 +1,48 @@
-# Projekti4
+﻿# Student Management System- PROEKTI 4 GRUPI 5
 
-## Branch Protection Rules
+## 📌 Project Description
+Student Management System është një aplikacion i zhvilluar për menaxhimin bazë të studentëve.  
+Ky projekt synon të demonstrojë përdorimin korrekt të **Git/GitHub workflow**, strukturimin 
+e kodit dhe zhvillimin gradual të funksionaliteteve përmes **branches** dhe **Pull Requests**.
 
-The `main` branch is protected to ensure code quality and stability.
+---
 
-- Direct commits to `main` are not allowed.
-- All changes must be introduced via a Pull Request from another branch.
-- Each Pull Request requires at least one review before it can be merged.
-- Pull Requests must be merged by someone other than the author.
+## 🎯 Project Objectives
+- Menaxhimi i të dhënave të studentëve
+- Shtimi i funksionaliteteve të reja në mënyrë të organizuar
+- Praktikimi i GitHub workflow (branch, commit, pull request, merge)
+- Punë e pastër dhe e dokumentuar në kod
 
-## Working with Branches & Pull Requests
+---
 
-### If you accidentally commit to `main`
-Undo the last commit while keeping your changes staged:
+## ⚙️ Features
+- ➕ Add Student  
+- 🔍 Search Student  
+- 📋 View Student List  
+- 🗂️ Organized project structure  
 
-~~~bash
-git reset --soft HEAD~1
-~~~
 
-Create a new branch:
+---
 
-~~~bash
-git checkout -b task-name
-~~~
+## 🛠️ Technologies Used
+- Programming Language: **C#**
+- Environment: **Visual Studio Code**
+- Version Control: **Git**
+- Repository Hosting: **GitHub**
 
-Commit your changes:
+---
 
-~~~bash
-git add .
-git commit -m "Your commit message"
-~~~
+## 🌱 Git Workflow
+Projekti ndjek këtë workflow:
 
-Push the branch:
+1. `main` përmban versionin stabil
+2. Çdo funksionalitet i ri zhvillohet në një **branch të veçantë**
+3. Pas përfundimit:
+   - Commit
+   - Push
+   - Pull Request
+4. Pull Request merge-ohet në `main`
 
-~~~bash
-git push -u origin branch-name
-~~~
+Ky proces siguron kod të pastër dhe pa konflikte.
+
+---
