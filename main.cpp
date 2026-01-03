@@ -19,7 +19,6 @@ public:
     }
 };
 
-
 void addStudent(vector<Student>& students) {
     int id;
     string name, surname;
@@ -55,21 +54,55 @@ void searchStudentById(const vector<Student>& students) {
             return;
         }
     }
+} 
 
-    void deleteStudentById(vector<Student>&students) {
-        int id;
-        cout << "Enter student ID to delete: ";
-        cin >> id;
+void deleteStudentById(vector<Student>& students) {
+    int id;
+    cout << "Enter student ID to delete: ";
+    cin >> id;
 
-        for (auto it = students.begin(); it != students.end(); ++it) {
-            if (it->id == id) {
-                students.erase(it);
-                cout << "Student deleted successfully.\n";
-                return;
-            }
+    for (auto it = students.begin(); it != students.end(); ++it) {
+        if (it->id == id) {
+            students.erase(it);
+            cout << "Student deleted successfully.\n";
+            return;
         }
+    }
+}
+
+// AK
 
 int main() {
-    
+    vector<Student> students;
+    int choice;
+
+    do {
+        cout << "\n===== MENU =====\n";
+        cout << "1. Add student\n";
+        cout << "2. Search student\n";
+        cout << "3. Delete student\n";
+        cout << "4. Exit\n";
+        cout << "Choose option: ";
+        cin >> choice;
+
+        switch (choice) {
+        case 1:
+            addStudent(students);
+            break;
+        case 2:
+            searchStudentById(students);
+            break;
+        case 3:
+            deleteStudentById(students);
+            break;
+        case 4:
+            cout << "Exiting program...\n";
+            break;
+        default:
+            cout << "Invalid choice.\n";
+        }
+
+    } while (choice != 4);
+
     return 0;
 }
